@@ -15,12 +15,28 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  title: {
+    fontSize: 36,
+    color: theme.colors.body,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  logo: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
   profileImage: {
-    width: 80,
-    height: 80,
+    width: 64,
+    height: 64,
 
     borderRadius: 8,
     borderWidth: 1,
     borderColor: theme.colors.secondary,
+  },
+  pizzaImg: {
+    width: 52,
+    height: 52,
+    resizeMode: 'contain'
+
   }
 });

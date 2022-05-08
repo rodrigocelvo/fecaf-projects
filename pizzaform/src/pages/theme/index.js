@@ -11,6 +11,7 @@ export const theme = {
     range: '#E4E4EB',
 
     body: '#FFFFFF',
+    line: '#912323',
 
     off: '#C72828',
     on: '#39B100',

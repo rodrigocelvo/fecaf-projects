@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../theme';
 
-import '../Input';
-
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -11,9 +9,9 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.body,
     borderRadius: 10,
     height: 60,
-    borderWidth: 3,
-
     marginBottom: 10,
+
+    borderWidth: 3
   },
   input: {
     flex: 1,
@@ -21,7 +19,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingRight: 20,
     fontSize: 16,
-    color: theme.colors.text,
   },
   title: {
     fontSize: 20,

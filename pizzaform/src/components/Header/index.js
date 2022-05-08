@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Text, View, SafeAreaView, Image } from 'react-native';
 
-import Brand from '../../../assets/brand.png';
+import Brand from '../../assets/brand.png';
 import { styles } from './styles';
 
 export function Header() {

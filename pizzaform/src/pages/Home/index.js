@@ -2,9 +2,9 @@ import React from 'react';
 
 import { View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 
-import { Header } from '../components/Header';
-import { Input } from '../components/Input';
-import { Button } from '../components/Button';
+import { Header } from '../../components/Header';
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 
 import { styles } from './styles';
 

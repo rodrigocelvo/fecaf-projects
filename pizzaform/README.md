@@ -1,3 +1,3 @@
 <h1 align="center">
-  <img alt="GamePlay" title="Result" src=".github/cover.png" />
+  <img alt="Resultado" title="Result" src=".github/screen.png" />
 </h1>

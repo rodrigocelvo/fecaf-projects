@@ -10,6 +10,8 @@ export const theme = {
     heading: '#F0F0F5',
     range: '#E4E4EB',
 
+    body: '#FFFFFF',
+
     off: '#C72828',
     on: '#39B100',
   },

@@ -10,12 +10,14 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const { Navigator, Screen } = createStackNavigator();
 
+import { Dashboard } from '../pages/Dashboard';
 import { Home } from '../pages/Home';
 
 export function Routes() {
   return (
     <NavigationContainer>
       <Navigator screenOptions={{ headerShown: false }} >
+        <Screen name="Dashboard" component={Dashboard} />
         <Screen name="Home" component={Home} />
       </Navigator>
     </NavigationContainer>

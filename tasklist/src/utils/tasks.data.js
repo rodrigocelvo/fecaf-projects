@@ -1,7 +1,7 @@
 export const tasksData = [
-  { id: '1', name: 'Assistir aula na faculdade', date: 'qua, 20 de maio', done: false },
-  { id: '2', name: 'Estudar React Native', date: 'qua, 20 de maio', done: true },
-  { id: '3', name: 'Fazer atividade de casa', date: 'qua, 20 de maio', done: false },
-  { id: '4', name: 'Mandar email para o chafe', date: 'qua, 20 de maio', done: true },
-  { id: '5', name: 'Preparar o almoço', date: 'qua, 20 de maio', done: true },
+  { id: '1', task: 'Assistir aula na faculdade', date: 'ter, 17 de maio', done: false },
+  { id: '2', task: 'Estudar React Native', date: 'ter, 17 de maio', done: true },
+  { id: '3', task: 'Fazer atividade de casa', date: 'ter, 17 de maio', done: false },
+  { id: '4', task: 'Mandar email para o chafe', date: 'ter, 17 de maio', done: true },
+  { id: '5', task: 'Preparar o almoço', date: 'ter, 17 de maio', done: true },
 ];

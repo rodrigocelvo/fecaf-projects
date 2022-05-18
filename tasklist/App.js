@@ -35,7 +35,9 @@ export default function App() {
 
             <View style={styles.boxContainer} key={item.id}>
               <View style={styles.box}>
-                <Image source={Circle} style={styles.checkImg} />
+                {
+                  item.done ? <Image source={Check} style={styles.checkImg} /> : <Image source={Circle} style={styles.checkImg} />
+                }
                 <Text style={styles.title}>{item.name}</Text>
               </View>
               <View style={styles.boxDesk}>

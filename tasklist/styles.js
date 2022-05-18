@@ -56,5 +56,10 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     marginLeft: 10,
+  },
+  titleChecked: {
+    fontSize: 20,
+    marginLeft: 10,
+    textDecorationLine: 'line-through',
   }
 });

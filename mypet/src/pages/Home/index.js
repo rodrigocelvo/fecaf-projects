@@ -37,6 +37,11 @@ export function Home() {
       await AsyncStorage.setItem('@mypet:pets', JSON.stringify(data));
       Alert.alert('Cadastro', 'Pet cadastrado com sucesso!');
 
+      setName('');
+      setRace('');
+      setWeight('');
+      setBirth('');
+
     } catch (error) {
       console.log(error)
       Alert.alert('Cadastro', 'Não foi possível cadastrar!');
@@ -51,10 +56,10 @@ export function Home() {
 
           <Text style={styles.title}>Cadastrar</Text>
 
-          <Input icon="github" placeholder="Nome do Pet" onChangeText={setName} />
-          <Input icon="tag" placeholder="Raça" onChangeText={setRace} />
-          <Input icon="airplay" placeholder="Peso" keyboardType="numeric" onChangeText={setWeight} />
-          <Input icon="calendar" placeholder="Nascimento" keyboardType="numeric" onChangeText={setBirth} />
+          <Input icon="github" placeholder="Nome do Pet" onChangeText={setName} value={name} />
+          <Input icon="tag" placeholder="Raça" onChangeText={setRace} value={race} />
+          <Input icon="airplay" placeholder="Peso" keyboardType="numeric" onChangeText={setWeight} value={weight} />
+          <Input icon="calendar" placeholder="Nascimento" onChangeText={setBirth} value={birth} />
           <Button title="Cadastar" icon="plus" onPress={handleNewPet} />
         </View>
       </ScrollView>

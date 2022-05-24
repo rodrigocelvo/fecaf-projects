@@ -9,8 +9,8 @@ import { Feather } from '@expo/vector-icons';
 
 export function Button({ title, icon, ...rest }) {
   return (
-    <TouchableOpacity>
-      <View style={styles.container} {...rest}>
+    <TouchableOpacity {...rest}>
+      <View style={styles.container}>
         <Text style={styles.title}>{title}</Text>
         <View style={styles.iconWrapper}>
           <Feather style={styles.icon} name={icon} size={24} />

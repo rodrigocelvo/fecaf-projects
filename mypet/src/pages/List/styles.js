@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
 
   item: {
     marginBottom: 10,
-    height: 100,
+    height: 120,
     backgroundColor: theme.colors.white,
     justifyContent: 'center',
     borderRadius: 10,
@@ -41,4 +41,11 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: theme.colors.text,
   },
+  delete: {
+    flexDirection: 'row',
+    position: 'absolute',
+    justifyContent: 'flex-end',
+    color: theme.colors.red,
+
+  }
 });

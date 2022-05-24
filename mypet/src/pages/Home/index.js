@@ -1,16 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { View, Text, ScrollView, Alert } from 'react-native';
 
-import { View, Text, ScrollView } from 'react-native';
+import uuid from 'react-native-uuid';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-
 
 import { styles } from './styles';
 
 import PetImg from '../../assets/god-doggy.svg';
 
 export function Home() {
+  const [name, setName] = useState('');
+  const [race, setRace] = useState('');
+  const [weight, setWeight] = useState('');
+  const [birth, setBirth] = useState('');
+
+  async function handleNewPet() {
+    try {
+      const id = uuid.v4();
+
+      const newData = {
+        id,
+        name,
+        race,
+        weight,
+        birth
+      }
+
+      const response = await AsyncStorage.getItem('@mypet:pets');
+      const previousData = response ? JSON.parse(response) : [];
+
+      const data = [...previousData, newData];
+
+      await AsyncStorage.setItem('@mypet:pets', JSON.stringify(data));
+      Alert.alert('Cadastro', 'Pet cadastrado com sucesso!');
+
+    } catch (error) {
+      console.log(error)
+      Alert.alert('Cadastro', 'Não foi possível cadastrar!');
+    }
+  }
+
   return (
     <>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -19,11 +51,11 @@ export function Home() {
 
           <Text style={styles.title}>Cadastrar</Text>
 
-          <Input icon="github" placeholder="Nome do Pet" />
-          <Input icon="tag" placeholder="Raça" />
-          <Input icon="airplay" placeholder="Peso" />
-          <Input icon="calendar" placeholder="Nascimento" />
-          <Button title="Cadastar" icon="plus" />
+          <Input icon="github" placeholder="Nome do Pet" onChangeText={setName} />
+          <Input icon="tag" placeholder="Raça" onChangeText={setRace} />
+          <Input icon="airplay" placeholder="Peso" keyboardType="numeric" onChangeText={setWeight} />
+          <Input icon="calendar" placeholder="Nascimento" keyboardType="numeric" onChangeText={setBirth} />
+          <Button title="Cadastar" icon="plus" onPress={handleNewPet} />
         </View>
       </ScrollView>
     </>
